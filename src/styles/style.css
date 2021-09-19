@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.image-container-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.image-container-wrapper__single-image {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.image-container-wrapper__single-image img {
+    margin-bottom: 10px;
+    border: solid 5px #f8f8f8;
+    box-shadow: 0 13px 27px -5px hsl(240deg 30% 28% / 25%), 0 8px 16px -8px hsl(0deg 0% 0% / 30%),
+        0 -6px 16px -6px hsl(0deg 0% 0% / 3%);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.image-container-wrapper__single-image__about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.image-container-wrapper__single-image__about div {
+    padding: 5px;
+    margin: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    max-width: 150px;
+}
+
+.image-paginator {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    padding: 30px;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    z-index: 101;
+    background-color: #ffffff;
+    max-height: 95vh;
+    overflow: auto;
+    position: relative;
+}
+
+.cancel-modal-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    height: 24px;
+    width: 24px;
+    border: none;
+    background: url("../assets/circle-icon-close.svg");
+    cursor: pointer;
+    outline: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.pagination a.active {
+    color: black;
+    padding: 10px 16px;
+    padding-top: 12px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
